@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TodoMVC</title>
+  <script>
+    if (!window.Reflect) {
+      window.location.assign('./index-ie.html');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.9.1/document-register-element.js"></script>
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <style>
+    howto-tab {
+      border: 1px solid black;
+      padding: 20px;
+    }
+
+    howto-panel {
+      padding: 20px;
+      background-color: lightgray;
+    }
+
+    howto-tab[selected] {
+      background-color: bisque;
+    }
+
+    If JavaScript does not run,
+    the element will not match :defined. In that case this style adds spacing between tabs and previous panel. howto-tabs:not(:defined),
+    howto-tab:not(:defined),
+    howto-panel:not(:defined) {
+      display: block;
+    }
+  </style>
+
+  <howto-tabs>
+    <howto-tab role="heading" slot="tab">Tab 1</howto-tab>
+    <howto-panel role="region" slot="panel">Content 1</howto-panel>
+    <howto-tab role="heading" slot="tab">Tab 2</howto-tab>
+    <howto-panel role="region" slot="panel">Content 2</howto-panel>
+    <howto-tab role="heading" slot="tab">Tab 3</howto-tab>
+    <howto-panel role="region" slot="panel">Content 3</howto-panel>
+  </howto-tabs>
+
+
+  <x-verification-input id="code1" class="codeInput"></x-verification-input>
+
+  <nab-dropdown>
+    <nab-search slot="content-pre"></nab-search>
+    <nab-list slot="content" data-collection='[{"label":"item"},{"label":"item2"},{"label":"item3"}]'>
+
+    </nab-list>
+  </nab-dropdown>
+
+
+  <script src="./src/index.js"></script>
+</body>
+
+</html>
