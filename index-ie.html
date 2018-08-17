@@ -19,7 +19,12 @@
     You need to enable JavaScript to run this app.
   </noscript>
 
-  <x-verification-input id="code1" class="codeInput">Test</x-verification-input>
+  <nab-dropdown>
+    <nab-search slot="content-pre"></nab-search>
+    <nab-list slot="content" data-collection='[{"label":"item"},{"label":"item2"},{"label":"item3"}]'>
+
+    </nab-list>
+  </nab-dropdown>
 
   <script src="./src/index.js"></script>
 </body>

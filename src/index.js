@@ -8,8 +8,4 @@ import "../node_modules/@webcomponents/shadycss/custom-style-interface.min.js";
 
 import "../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js";;
 
-
-import "todomvc-common/base.css";
-import "todomvc-app-css/index.css";
-
 import "./components";
