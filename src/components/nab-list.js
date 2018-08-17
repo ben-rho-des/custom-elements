@@ -18,10 +18,15 @@
       this.shadowRoot.appendChild(template.content.cloneNode(true));
       this._list = this.shadowRoot.querySelector(".nab-list");
       this._collection = JSON.parse(this.dataset.collection);
-      console.log(this._collection)
+      // const temp = document.getElementById("my-list-template").content;
+      // for(var i = 0; i < this._list; i++){
+      //   this._list.appendChild(temp);
+      // }
+
       const list = this._collection.map(item => `<li>${item.label}</li>`).join(" ");
-      console.log(list)
+
       this._list.innerHTML = list;
+
     }
 
   }
