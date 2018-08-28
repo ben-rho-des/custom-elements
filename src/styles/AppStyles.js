@@ -1,4 +1,4 @@
-import { html } from '@polymer/lit-element';
+import { html } from 'lit-html';
 import { POLYMER_PINK } from './Colors';
 
 const SPACER = 5;
@@ -10,7 +10,6 @@ export const AppStyles = html`
   }
   .app {
     text-align: center;
-    font-family: sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -18,7 +17,6 @@ export const AppStyles = html`
   .app-content {
     flex: 1;
   }
-
   .app-logo {
     animation: app-logo-spin infinite 20s linear;
     height: 80px;

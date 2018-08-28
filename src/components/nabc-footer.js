@@ -4,18 +4,20 @@ class NabcFooter extends LitElement {
   static get properties() {
     return {
       copyright: {
-        type: String,
-        value: "© National Australia Bank Limited."
+        type: String
       },
       text: {
-        type: String,
-        value: "Use of the information contained on this page is governed by Australian Law and is subject to the disclaimers which can be read on the disclaimer page."
+        type: String
       }
     };
   }
 
   constructor() {
     super();
+
+    //defaults
+    this.copyright = "© National Australia Bank Limited.";
+    this.text = "Use of the information contained on this page is governed by Australian Law and is subject to the disclaimers which can be read on the disclaimer page.";
   }
 
   _render() {
@@ -58,7 +60,6 @@ class NabcFooter extends LitElement {
             align-items: center;
             flex-direction: column;
         }
-
         </style>
         <div class="nabc-footer">
             <div class="content-section">

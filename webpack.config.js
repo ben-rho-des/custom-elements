@@ -27,7 +27,11 @@ const assets = [
   {
     from: resolve('./src/assets/github.svg'),
     to: resolve('dist/assets/')
-  }
+  },
+  {
+    from: resolve('./src/assets/fonts/*'),
+    to: resolve('dist/assets/fonts/')
+  },
 ];
 
 const polyfills = [
