@@ -24,28 +24,26 @@ class NabcFooter extends LitElement {
     return html`
         <style>
         .nabc-footer {
-            background-color: #000;
+            background-color: var(--black);
+            font-family: var(--font-family-base);
             height: 160px;
             width: 100%;
             color: #fff;
-            min-width: 982px;
-        }
-        .nabc-footer .content-section {
-            height: 100px;
+            min-width: 980px;
         }
         .nabc-footer .copy {
-            font-family: SourceSansSemibold,Helvetica,Arial,sans-serif;
-            font-size: 16px;
-            line-height: 16px;
+            font-weight: var(--font-weight-semi-bold);
+            font-size: var(--font-size-base);
+            line-height: var(--font-size-base);
             margin-bottom: 5px;
         }
         .nabc-footer p {
+            font-size: 13px;
             line-height: 15px;
             margin: 0;
             text-align: center;
         }
         .nabc-footer p:not(.copy) {
-            font-size: .875rem;
             max-width: 450px;
         }
         .container {
@@ -55,21 +53,19 @@ class NabcFooter extends LitElement {
             padding-left: 15px;
             padding-right: 15px;
             justify-content: center;
-            height: 100%;
+            height: 100px;
             display: flex;
             align-items: center;
             flex-direction: column;
         }
         </style>
         <div class="nabc-footer">
-            <div class="content-section">
-                <slot name="footer-pre"></slot>
+                <slot name="before"></slot>
                 <div class="container">
                     <p class="copy">${this.copyright}</p>
                     <p>${this.text}</p>
                 </div>
-                <slot name="footer-post"></slot>
-            </div>
+                <slot name="after"></slot>
         </div>
 		`;
   }

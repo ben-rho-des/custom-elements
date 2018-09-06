@@ -1,9 +1,15 @@
 import { html } from 'lit-html';
 import { POLYMER_PINK } from './Colors';
 
+import { variables } from "./BaseVariables";
+import { BaseTheme } from "./BaseTheme";
+
 const SPACER = 5;
 
+const theme = new BaseTheme(variables);
+
 export const AppStyles = html`
+${theme.cssVariables()}
 <style>
   :host {
     height: 100%;

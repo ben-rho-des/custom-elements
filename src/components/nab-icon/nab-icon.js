@@ -7,16 +7,18 @@ class NabIcon extends LitElement {
     return {
       icon: String,
       color: String,
-      bg: String
+      reversed: Boolean,
+      bg: String,
+      size: String
     };
   }
 
   constructor() {
     super();
     this.color = "#000000";
-    this.icon = "";
     this.reversed = false;
     this.bg = "transparent";
+    this.size = "24";
   }
 
   _render(props) {
